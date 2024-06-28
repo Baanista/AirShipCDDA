@@ -1,0 +1,26 @@
+[
+    {
+        "abstract": "ballon",
+        "type": "vehicle_part",
+        "categories": [ "movement" ],
+        "location": "on_roof",
+        "color": "light_blue",
+        "flags": ["SMASH_REMOVE" ],
+        "description": "a floating ballon",
+        "variants": [ { "symbols": "O", "symbols_broken": "0" } ],
+        "control_requirements": { "air": { "proficiencies": [ "NONE" ] } }
+    },
+    {
+        "id": "hellium_ballon",
+        "copy-from": "ballon",
+        "type": "vehicle_part",
+        "name": { "str": "hellium_ballon" },
+        "item": "hellium_ballon",
+        "durability": 450,
+        "description": "hellium_ballon lifts your vehicle",
+        "damage_modifier": 80,
+        "requirements": { "removal": { "skills": [ [ "mechanics", 3 ] ], "time": "1 h", "using": "vehicle_weld_removal" } },
+        "breaks_into": [ { "item": "scrap", "count": [ 15, 30 ] }, { "item": "steel_chunk", "count": [ 8, 16 ] } ],
+        "damage_reduction": { "all": 66 }
+      }
+]
